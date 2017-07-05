@@ -1,0 +1,5 @@
+Para iniciar el programa, por favor, ejecutar los siguientes pasos:
+
+1. Abrir el archivo constantes.f90 y modificar el tamaño de la malla, el número de Reynolds y los parámetros que sean pertinentes a la simulación.
+
+2. Abrir la consola en la carpeta donde están los archivos y ejecutar: "make". En este punto la estructura del makefile compila el programa y luego, automáticamente, lo ejecuta. Cuando el programa finaliza se borra el ejecutable del programa y solo quedan los resultados gráficos.
