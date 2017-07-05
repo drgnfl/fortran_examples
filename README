@@ -3,7 +3,7 @@ In this repo I'll be uploading some misc. works mainly in .f90
 cfd_hwm1: 1st homework from the cfd course. Is a simulation of the kelvin-helmholtz instability. (check gif)
 cfd_hmw2: 2nd homework. The objetive was to describe the flow past a square cylinder. (check gif)
 dipole: a vector plot using gnuplot for the dipole eq.
-heatt: An example plot for temp and heat using toy functions and gnuplot.
+heatt: An example plot for temp and heat using toy functions, finite diferences and gnuplot.
 plot_eq: a simple and minimal plot for a nonlinear equation using gnuplot
 
 test comment
