@@ -5,3 +5,5 @@ cfd_hmw2: 2nd homework. The objetive was to describe the flow past a square cyli
 dipole: a vector plot using gnuplot for the dipole eq.
 heatt: An example plot for temp and heat using toy functions and gnuplot.
 plot_eq: a simple and minimal plot for a nonlinear equation using gnuplot
+
+test comment
