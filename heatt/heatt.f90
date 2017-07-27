@@ -57,11 +57,10 @@ write(50,*) "set output 'heatt2.png'"
 write(50,*) "unset key"
 write(50,*) "set xrange [0:1]"
 write(50,*) "set yrange [0:1]"
-write(50,*) "set palette defined(1 'blue',2 'green',3 'yellow',4 'red')"
+write(50,*) "load 'viridis.pal'"
 write(50,*) "set contour"
 write(50,*) "unset surface"
-write(50,*) "set cntrparam levels auto 20"
-write(50,*) "set view map"
+write(50,*) "set cntrparam levels auto 10"
 write(50,*) "unset clabel"
 write(50,*) "set table 'cont.dat'"
 write(50,*) "splot 'heatt.txt' u 1:2:3 w lines"
@@ -70,9 +69,23 @@ write(50,*) "unset contour"
 write(50,*) "plot 'heatt.txt' u 1:2:3 w image, 'cont.dat' w l lt -1 lw 1.5"
 close(unit=50)
 call system('gnuplot style2.gnu')
+!Ploteo llamando a gnuplot con círculos
+open(unit=60, file="style3.gnu")
+write(60,*) "set terminal postscript eps enhanced color font 'Verdana,10'"
+write(60,*) "set output 'heatt3.eps'"
+write(60,*) "unset key"
+write(60,*) "set size square"
+write(60,*) "set xrange [0:1]"
+write(60,*) "set yrange [0:1]"
+write(60,*) "load 'viridis.pal'"
+write(60,*) "set pm3d map interpolate 0,0"
+write(60,*) "splot 'heatt.txt'"
+close(unit=60)
+call system('gnuplot style3.gnu')
 !Se borran los archivos auxiliares
 call system('rm style.gnu')
 call system('rm style2.gnu')
+call system('rm style3.gnu')
 call system('rm heatt.txt')
 call system('rm cont.dat')
 call system('rm heattvec.txt')
